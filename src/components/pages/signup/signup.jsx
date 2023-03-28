@@ -12,7 +12,7 @@ export const Register = (props) => {
     axios
       .post("http://localhost:3001/register", {
         email: email,
-        userName: username,
+        username: username,
         password: password,
       })
       .then((response) => {
@@ -28,21 +28,21 @@ export const Register = (props) => {
     <div className="auth-form-container">
       <h2>Sign Up</h2>
       <form className="register-form"  action="/register" method="POST" >
-        <label htmlFor="name">Username</label>
-        <input
+        <label htmlFor="username">Username</label>
+         <input
           value={username}
-          username="username"
           onChange={(e) => setUsername(e.target.value)}
-          id="name"
+          type="text"
+          placeholder="Username"
+          id="username"
           name="username"
-          placeholder="full Name"
         />
+       
         <label htmlFor="email">Email</label>
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
-          
           placeholder="Email"
           id="email"
           name="email"
