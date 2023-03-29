@@ -1,0 +1,89 @@
+.App {
+  text-align: start;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: #2C3333;
+  background-color: #0E8388;
+}
+
+.login-form,
+.register-form {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+.auth-form-container
+{
+  background-color: #FFFDD0;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media screen and (min-width: 600px) {
+  .auth-form-container {
+    padding: 5rem;
+    border: 5px solid #FFFDD0;
+    min-width: 300px;
+    border-radius: 16px;
+    margin: 0.5rem;
+    box-shadow: 0 0 800px 10px #2E4F4F;
+  }
+}
+
+
+label {
+  font-size: 15px;
+  text-align: left;
+  padding: 0.25rem 0;
+  color: #2E4F4F;
+}
+
+input {
+  margin: 0.5rem 0;
+  color: black;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: black;
+  box-shadow: 0 0 5px 1px rgba(46, 79, 79, 1)
+}
+
+input:focus {
+  border: none;
+  outline: none;
+  color: black;
+  border-bottom: 3px solid rgba(44, 51, 51, 1);
+}
+
+button {
+  width: fit-content;
+  border-radius: 5px;
+  background-color: transparent;
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #39304d;
+}
+
+button i{
+  font-size: xx-large;
+  padding-bottom: 20px;
+}
+
+form .set {
+  border: none;
+  align-self: flex-end;
+}
+
+.link-btn {
+  align-self: center;
+  border: none;
+  background: none;
+  color: #39304d;
+  font-size: 12px;
+}

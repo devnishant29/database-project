@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from 'axios';
 
+import './login.css';
+
 
 export const Login = (props) => {
   const [username, setUsername] = useState("");
@@ -10,7 +12,7 @@ export const Login = (props) => {
   const login = (e) => {
     e.preventDefault();
     axios.post("http://localhost:3001/login", {
-      userName: username,
+      username: username,
       password: password,
     }).then((response) => {
       if(response.data.message) {
@@ -27,12 +29,12 @@ export const Login = (props) => {
   return (
     <div className="auth-form-container">
       <h2 className="screen">Log in</h2>
-      <form className="login-form">
+      <form className="login-form" action="/login" method="POST">
         <label htmlFor="username">Username</label>
         <input
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          type="text"
+          type="username"
           placeholder="username"
           id="username"
           name="username"
@@ -47,7 +49,7 @@ export const Login = (props) => {
           name="password"
         />
         <button className="set" type="submit" onClick={login}>
-          <i class="fa-solid fa-circle-arrow-right"></i>{""}
+          <i class="fa-solid fa-circle-arrow-right"></i>{" "}
         </button>
         <h1 style={{color: 'red', fontSize: '15px', textAlign: 'center', marginTop: '20px'}}>{loginStatus}</h1>
       </form>
