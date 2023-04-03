@@ -7,9 +7,9 @@ import { Content } from "./content";
 export const HomePage = () => {
 
   return (
-    <>
+    <div>
       <NavigationBar/>
       <Content/>
-    </>
+    </div>
   );
 };

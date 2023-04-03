@@ -1,14 +1,10 @@
 import React from "react";
-import './content.css';
+import "../content.css";
 
 export const Content = () => {
-
   return (
-    <div>
-      <img 
-          src={require('./home.jpg')} 
-          alt="logo" 
-      />
+    <div className="page">
+        <img src={require("./home.jpg")} alt="logo" />
       <div className="hero-text">
         <h1>Your Journey Your Story</h1>
         <p>Choose Your Favourite Destination.</p>

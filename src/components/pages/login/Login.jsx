@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 import './login.css';
 
@@ -8,6 +9,10 @@ export const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginStatus, setLoginStatus] = useState("");
+
+
+  const navigate = useNavigate();
+  
 
   const login = (e) => {
     e.preventDefault();
@@ -19,14 +24,17 @@ export const Login = (props) => {
         setLoginStatus(response.data.message);
       }
       else {
-        setLoginStatus(response.data[0].email);
+        if(username === "" || password === "") {
+          setLoginStatus("Empty Username or Password");
+          return;
+        }
+        navigate('/home');
       }
     })
-    
   }
 
-
   return (
+    <div className="container">
     <div className="auth-form-container">
       <h2 className="screen">Log in</h2>
       <form className="login-form" action="/login" method="POST">
@@ -38,6 +46,7 @@ export const Login = (props) => {
           placeholder="username"
           id="username"
           name="username"
+          required
         />
         <label htmlFor="password">Password</label>
         <input
@@ -47,9 +56,10 @@ export const Login = (props) => {
           placeholder="Password"
           id="password"
           name="password"
+          required
         />
         <button className="set" type="submit" onClick={login}>
-          <i class="fa-solid fa-circle-arrow-right"></i>{" "}
+          <i class="fa-solid fa-circle-arrow-right"></i>{""}
         </button>
         <h1 style={{color: 'red', fontSize: '15px', textAlign: 'center', marginTop: '20px'}}>{loginStatus}</h1>
       </form>
@@ -59,6 +69,7 @@ export const Login = (props) => {
       >
         Don't have an account? Register here.
       </button>
+    </div>
     </div>
   );
 };

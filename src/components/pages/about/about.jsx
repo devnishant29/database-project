@@ -6,9 +6,9 @@ import { Content } from "./content";
 export const AboutPage = () => {
 
   return (
-    <>
+    <div>
       <NavigationBar/>
       <Content/>
-    </>
+    </div>
   );
 };

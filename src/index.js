@@ -1,11 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { Routes, Route } from 'react-router';
+
+
+import { BrowserRouter } from "react-router-dom";
+import { HomePage } from "./components/pages/home/home";
+import { AboutPage } from "./components/pages/about/about";
+import { ServicesPage } from "./components/pages/service/services";
+import { ContactPage } from "./components/pages/contact/contact";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <App/>
