@@ -4,7 +4,9 @@ import "../content.css";
 export const Content = () => {
   return (
     <div className="page">
-        <img src={require("./home.jpg")} alt="logo" />
+        <div className="image_container">
+          <img src={require("./home.jpg")} alt="logo" />
+        </div>
       <div className="hero-text">
         <h1>Your Journey Your Story</h1>
         <p>Choose Your Favourite Destination.</p>

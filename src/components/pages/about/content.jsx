@@ -5,9 +5,9 @@ export const Content = () => {
 
   return (
     <div className="page">
-      <div className="image_div">
-        <img src={require("./about.jpg")} alt="logo" />
-      </div>
+        <div className="image_container">
+          <img src={require("./about.jpg")} alt="logo" />
+        </div>
       <div className="hero-text">
         <h1>Your Journey Your Story</h1>
         <p>Choose Your Favourite Destination.</p>
