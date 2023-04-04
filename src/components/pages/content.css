@@ -73,20 +73,6 @@ input:focus, textarea:focus {
   color: black;
 }
 
-.submit {
-  margin-top: 92px;
-  margin-left: 30px;
-  width: fit-content;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  height: 50px;
-  cursor: pointer;
-  background-color: rgb(245, 222, 178);
-  color: #2E4F4F;
-}
-
-
 .contact-inputs {
   padding-left: 15px;
   font-size: large;
@@ -108,4 +94,14 @@ textarea {
   margin-top: 17px;
   margin-left: 30px;
   height: 92px;
+}
+
+.message_button{
+  margin-top: 98px;
+  margin-left: 30px;
+  background-color: wheat;
+  height: 45px;
+  width: 55px;
+  border-radius: 10px;
+  border: none;
 }
