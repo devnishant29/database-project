@@ -62,7 +62,7 @@ input:focus {
   border-bottom: 3px solid rgba(44, 51, 51, 1);
 }
 
-button {
+button .set{
   width: fit-content;
   border-radius: 5px;
   background-color: transparent;
