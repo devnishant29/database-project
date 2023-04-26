@@ -1,0 +1,10 @@
+.about_details {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 555px) {
+  .about_details {
+    font-size: 10px;
+  }
+  
+}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../content.css";
 import axios from "axios";
 
-export const Content = (props) => {
+export const Contact_Content = (props) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");

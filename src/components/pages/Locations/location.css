@@ -1,0 +1,140 @@
+.location_list {
+  list-style-type: none;
+  padding: 0;
+}
+ 
+.location_image {
+  height : 95vh;
+  width: auto;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.25);
+}
+
+.image_text {
+  margin: 20px 0 100px 10px;
+  display: flex;
+}
+
+.details {
+  padding: 0 0 0 50px;
+}
+
+.title {
+  margin: 20px 0px;
+  font-size: 50px;
+}
+
+.summary {
+  font-size: large;
+}
+
+.tour_duration {
+  margin-top: 15vh;
+  padding-bottom: 0px;
+  font-size: larger;
+  font-weight: bold;
+}
+.tour_price {
+  padding-top: 0px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.travel_button {
+  margin-top:3.5vh;
+  margin-left: 30px;
+  text-decoration: none;
+  background: rgb(193, 193, 193);
+  padding: 15px 20px 15px 20px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.travel_button:hover{
+  background-color: rgb(17, 17, 17);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.next {
+  margin-top:3vh;
+  text-decoration: none;
+  background: rgb(193, 193, 193);
+  padding: 15px 20px 15px 20px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.next:hover{
+  background-color: rgb(17, 17, 17);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+/* .confirm_travel:hover{
+  background-color: rgb(17, 17, 17);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+} */
+
+@media screen and (max-width: 1200px) {
+  .location_image { 
+    width: 95vw;
+    height: fit-content;
+  }
+
+  .image_text {
+    flex-direction: column;
+  }
+
+  .details {
+    padding: 0 0 0 0;
+  }
+
+  .title {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  
+  .summary {
+    font-size: 13px;
+    margin-top: 0;
+  }
+
+  .tour_duration {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .tour_price {
+    font-size: 12px;
+    padding-top: 0px;
+    font-weight: bold;
+  }
+  
+  .travel_button {
+    margin-top:0px;
+    text-decoration: none;
+    background: rgb(193, 193, 193);;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #222;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+} 

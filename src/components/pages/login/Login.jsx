@@ -13,6 +13,7 @@ export const Login = (props) => {
 
   const login = (e) => {
     e.preventDefault();
+    window.globalUsername = username
     axios
       .post("http://localhost:3001/login", {
         username: username,
@@ -21,12 +22,15 @@ export const Login = (props) => {
       .then((response) => {
         if (response.data.message) {
           setLoginStatus(response.data.message);
-        } else {
+        } 
+        else {
           if (username === "" || password === "") {
             setLoginStatus("Empty Username or Password");
             return;
           }
-          navigate("/home");
+          navigate("/home", {state : {
+            username: window.globalUsername
+          }});
         }
       });
   };
